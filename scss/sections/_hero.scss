@@ -1,0 +1,57 @@
+.hero {
+    background: url('../img/bg_img1.png') no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 960px;
+    color: $color-white;
+    text-align: center;
+    padding-top: vh(313);
+    &__title {
+        @include font('Bebas Neue', 700, vw(24), vw(24));
+        letter-spacing: 2px;
+        margin-bottom: vh(36);
+    }
+    &__button-text {
+        color: #1A1917;
+        position: relative;
+        margin-right: vw(12);
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: rgba(26, 25, 23, .5);
+            bottom: 0;
+            right: vw(-11);
+            width: vw(1);
+            height: 100%;
+        }
+    }
+    &__button-price {
+        margin-left: vw(12);
+    }
+}
+
+@include mobile {
+    .hero {
+        min-height: 649px;
+        padding-top: vmin(200);
+        &__title {
+            @include font('Bebas Neue', 400, vmin(22), vmin(22));
+            padding: 0 vmin(20);
+            letter-spacing: vw(2);
+            margin-bottom: vh(36);
+        }
+        &__button-text {
+            margin-right: vwmin(12);
+            &::before {
+                right: vmin(-11);
+                width: vmin(1);
+            }
+        }
+        &__button-price {
+            margin-left: vmin(12);
+        }
+    }
+}
+
+
+

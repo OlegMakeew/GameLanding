@@ -1,0 +1,164 @@
+.footer {
+    background-color: #080A0B;
+    color: $color-white;
+    &__logo {
+        width: vw(90);
+    }
+    &__content {
+        @include flex(space-between);
+        border-bottom: 2px solid rgba(255, 255, 255, .5);
+        ;
+        padding: vh(30) 0;
+        .footer__list {
+            display: flex;
+            list-style: none;
+            &-item {
+                padding-right: vw(38);
+                @include font('Open Sans', 700, vw(12), vh(16));
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+    &__options {
+        display: flex;
+        &-item {
+            padding-right: vw(55);
+            cursor: pointer;
+            svg, svg path{
+                transition: 0.3s;
+            }
+            &:hover {
+                svg path{
+                    fill: red;
+                }
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+
+    &__company {
+        @include flex(space-between);
+        padding: vh(22) 0 vh(50);
+        &-info {
+            @include font('Open Sans', 400, vw(14), vh(19));
+            color: rgba(255, 255, 255, .5);
+        }
+        &-list {
+            display: flex;
+            list-style: none;
+            .footer__list-item {
+                @include font('Open Sans', 700, vw(12), vh(16));
+                padding: 0 vw(10);
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background-color: #FFFFFF;
+                    bottom: 0;
+                    right: 0;
+                    width: 2px;
+                    height: 100%;
+                }
+                &:last-child {
+                    &::before {
+                        content: '';
+                        width: 0;
+                        height: 0;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.footer {
+    @include mobile {
+        &__logo {
+            width: vmin(50);
+        }
+        &__content {
+            padding: vmin(20) 0 vmin(20) vmin(10);
+            flex-wrap: wrap;
+            justify-content: center;
+            .footer__list {
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: vmin(42);
+                &-item {
+                    padding-right: vmin(30);
+                    margin-bottom: vmin(22);
+                    @include font('Open Sans', 700, vmin(12), vmin(16));
+                    &:last-child {
+                        padding-right: vmin(33);
+                    }
+                }
+            }
+        }
+        &__options {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            margin: vmin(22) 0 vmin(20);
+            &-item {
+                padding-right: vmin(40);
+            }
+        }
+
+        &__company {
+            padding: vmin(22) 0 vmin(50);
+            flex-wrap: wrap;
+            justify-content: center;
+            &-info {
+                @include font('Open Sans', 400, vmin(12), vmin(16));
+                margin-bottom: vmin(40);
+            }
+            &-list {
+                flex-direction: column;
+                text-align: center;
+                .footer__list-item {
+                    @include font('Open Sans', 700, vmin(12), vmin(16));
+                    padding: 0 vmin(10);
+                    margin-bottom: vmin(25);
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        background-color: #FFFFFF;
+                        bottom: 0;
+                        right: 0;
+                        width: 2px;
+                        height: 100%;
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        background-color: #FFFFFF;
+                        bottom: 0;
+                        left: 0;
+                        width: 2px;
+                        height: 100%;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    &:last-child, &:first-child{
+                        &::before, &::after {
+                            content: '';
+                            width: 0;
+                            height: 0;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

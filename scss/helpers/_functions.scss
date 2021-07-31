@@ -1,0 +1,12 @@
+@function vw($value, $base: 1440) {
+	@return $value / $base * 100vw;
+}
+
+// vh - для адаптации стилей под высоту страницы
+@function vh($value, $base: 960) {
+	@return $value / $base * 100vh;
+}
+
+@function vmin($px, $base: 320) {
+	@return $px / $base * 100vmin;
+};

@@ -1,0 +1,48 @@
+.news {
+    background-color: #080A0B;
+    padding-top: vh(60);
+    &__info {
+        padding-top: vh(170);
+        .title {
+            margin-bottom: vh(50);
+        }
+    }
+    &__form {
+        margin-top: vw(30);
+        display: flex;
+        text-align: center;
+        input {
+            @include font('Open Sans', 400, vw(18), vw(26));
+            width: vw(366);;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 5px;
+            color: $color-yellow;
+            margin-right: vw(20);
+        }
+    }
+}
+
+.news {
+    @include mobile {
+        padding-top: vminb(10);
+        &__info {
+            padding-top: vmin(20);
+            .title {
+                margin-bottom: vmin(50);
+            }
+        }
+        &__form {
+            margin-top: vmin(30);
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            input {
+                @include font('Open Sans', 400, vw(14), vw(19));
+                width: vmin(270);
+                height: vmin(44);
+                margin-right: vmin(20);
+            }
+        }
+    }
+}
+

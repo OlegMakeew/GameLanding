@@ -1,0 +1,19 @@
+@mixin font($font, $weigth, $size, $height) {
+	font-family: $font;
+	font-style: normal;
+	font-weight: $weigth;
+	font-size: $size;
+	line-height: $height;
+};
+@mixin flex($justify:center, $align:center) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+@mixin mobile() {
+	@media screen and (max-width: 768px) {
+		@content
+	}
+}
+

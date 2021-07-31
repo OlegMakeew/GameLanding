@@ -1,0 +1,126 @@
+.quotes {
+    background: url('../img/bg_img5.png') no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 960px;
+    color: $color-white;
+    padding-top: vh(159);
+    .row {
+        @include flex(space-between, none);
+    }
+    .title {
+        margin-bottom: vh(70);
+    }
+    .description {
+        margin-bottom: vw(70);
+    }
+    &__text {
+        padding-top: vh(144);
+    }
+    &__list {
+        list-style: none;
+        &-item {
+            width: vw(450);
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: vw(15);
+            margin-bottom: vh(35);
+            transition: 0.7s;
+            &:hover {
+                transform: translateX(vw(-145));
+            }
+        }
+    }
+}
+
+.profile {
+    &__head {
+        @include flex(space-between);
+        &-content {
+            @include flex;
+            position: relative;
+            .ptofile__img {
+                z-index: 1;
+                width: vw(65);
+                margin-right: vw(18);
+                &-bg {
+                    position: absolute;
+                    top: 9%;
+                    left: 6%;
+                }
+            }
+        }
+        &-type {
+            @include font('Open Sans', 400, vw(18), vw(22));
+            opacity: 0.5;
+        }
+    }
+    &__review {
+        @include font('Open Sans', 400, vw(18), vw(25));
+        margin-top: vh(30);
+    }
+    &__date {
+        @include font('Open Sans', 400, vw(14), vw(19));
+        margin-top: vh(15);
+        mix-blend-mode: normal;
+        opacity: 0.5;
+    }
+}
+
+
+@include mobile {
+    .quotes {
+        min-height: 870px;
+        padding-top: vmin(10);
+        .title {
+            margin-bottom: vmin(30);
+        }
+        .description {
+            margin-bottom: vmim(70);
+        }
+        &__text {
+            padding-top: vmin(10);
+        }
+        &__list {
+            list-style: none;
+            margin-top: vmin(30);
+            &-item {
+                width: vmin(290);
+                border-radius: vmin(10);
+                padding: vmin(5);
+                margin-bottom: vmin(20);
+                &:hover {
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+    
+    .profile {
+        &__head {
+            &-content {
+                .ptofile__img {
+                    width: vmin(45);
+                    margin-right: vmin(18);
+                    &-bg {
+                        width: vmin(45);
+                    }
+                }
+            }
+            &-type {
+                @include font('Open Sans', 400, vmin(14), vmin(22));
+            }
+        }
+        &__review {
+            @include font('Open Sans', 400, vmin(14), vmin(19));
+            margin-top: vmin(20);
+        }
+        &__date {
+            @include font('Open Sans', 400, vmin(14), vmin(19));
+            margin-top: vmin(15);
+        }
+    }
+}
+
+
+

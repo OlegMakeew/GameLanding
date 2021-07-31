@@ -1,0 +1,71 @@
+.features {
+    background: url('../img/bg_img3.png') no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 960px;
+    color: $color-white;
+    padding-top: vh(205);
+    padding-left: vw(800);
+    &__item {
+        padding:0 0 vw(36) vw(20);
+        margin-top: vh(5);
+        &:first-child {
+            margin-top: vw(70);
+        }
+    }
+}
+
+.accordion {
+    background-color: rgba($color: #000000, $alpha: 0);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+    &__title {
+        @include font('Bebas Neue', 700, vw(36), vh(36));
+        letter-spacing: 2px;
+        color: $color-yellow;
+    }
+}
+.panel {
+    padding-right: vw(40);
+    background-color: rgba($color: #000000, $alpha: 0);
+    margin-top: vh(20);
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+    p {
+        width: vw(362);
+    }
+}
+
+@include mobile {
+    .features {
+        min-height: 590px;
+        padding-top: vmin(90);
+        padding-left: vmin(90);
+        &__item {
+            padding:0 0 vmin(26) 0;
+            button {
+                text-align: left;
+            }
+            &:first-child {
+                margin-top: vmin(70);
+            }
+        }
+    }
+    
+    .accordion {
+        &__title {
+            @include font('Bebas Neue', 700, vmin(21), vmin(21));
+        }
+    }
+    .panel {
+        padding-right: 0;
+        margin-top: vmin(10);
+        p {
+            width: 75%;
+        }
+    }
+}
