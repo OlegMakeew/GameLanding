@@ -19,11 +19,17 @@
     &__border {
         width: vw(573);
         position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
         z-index: -1;
         opacity: 1;
         &-mob {
             opacity: 0;
             position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
             z-index: -1;
         }
     }

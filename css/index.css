@@ -752,6 +752,9 @@
 .system__border {
   width: 39.79167vw;
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: -1;
   opacity: 1;
 }
@@ -759,6 +762,9 @@
 .system__border-mob {
   opacity: 0;
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: -1;
 }
 
@@ -1202,7 +1208,7 @@ a {
     font-size: 5.625vmin;
     line-height: 5.625vmin;
     letter-spacing: 0.625vmin;
-    padding-bottom: 4.6875vmin;
+    padding-bottom: 1.5625vmin;
   }
   .title {
     font-family: "Bebas Neue";

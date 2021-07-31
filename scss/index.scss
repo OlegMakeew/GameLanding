@@ -115,7 +115,7 @@ a {
     .question {
         @include font('Bebas Neue', 400, vmin(18), vmin(18));
         letter-spacing: vmin(2);
-        padding-bottom: vmin(15);
+        padding-bottom: vmin(5);
 
     }
     .title {
