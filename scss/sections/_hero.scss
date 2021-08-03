@@ -1,11 +1,30 @@
 .hero {
-    background: url('../img/bg_img1.png') no-repeat center;
-    background-size: cover;
     height: 100vh;
     min-height: 960px;
     color: $color-white;
     text-align: center;
+    position: relative;
     padding-top: vh(313);
+    &__slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -5;
+        .slick-list, .slick-track {
+            height: 100%;
+        }
+        .slick-next.slick-arrow, .slick-dots {
+            opacity: 0;
+        }
+        &-item {
+            img {
+                height: 100%;
+                object-fit: cover
+            }
+        }
+    }
     &__title {
         @include font('Bebas Neue', 700, vw(24), vw(24));
         letter-spacing: 2px;
@@ -28,10 +47,18 @@
     &__button-price {
         margin-left: vw(12);
     }
+    &__anchor {
+        margin-top: vw(363);
+        &-text {
+            @include font('Open Sans', 700, vw(12), vw(22));
+            text-transform: uppercase;
+        }
+    }
 }
 
 @include mobile {
     .hero {
+        background: black;
         min-height: 649px;
         padding-top: vmin(200);
         &__title {
@@ -47,8 +74,57 @@
                 width: vmin(1);
             }
         }
+        &__anchor {
+            margin-top: vmin(174);
+            text-align: left;
+            &-text {
+                @include font('Open Sans', 700, vmin(12), vmin(22));
+            }
+            svg {
+                margin-left: vmin(20);
+            }
+        }
         &__button-price {
             margin-left: vmin(12);
+        }
+        &__slider {
+            z-index: 1;
+        }
+        .slick-next.slick-arrow, .slick-dots {
+            opacity: 1;
+        }
+        .slick-next.slick-arrow {
+            position: absolute;
+            bottom: 15%;
+            right: 5%;
+            cursor: pointer;
+            width: vmin(50);
+            height: vmin(10);
+            font-size: 0;
+            background: url('../img/longArrow.svg') center 
+            center no-repeat;
+            border: none;
+        }
+        .slick-dots {
+            display: flex;
+            list-style-type: none;
+            position: absolute;
+            bottom: 15%;
+            right: 20%;
+            .slick-active button{
+                background-color: $color-white;
+            }
+            li {
+                margin-right: vmin(12);
+            }
+            button{
+                font-size: 0;
+                width: vmin(10);
+                height: vmin(10);
+                background-color: rgba($color: #000000, $alpha: 0);
+                border: vmin(2) solid #FFFFFF;
+                border-radius: 50%;
+            }
         }
     }
 }

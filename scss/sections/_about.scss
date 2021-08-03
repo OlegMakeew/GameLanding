@@ -41,7 +41,7 @@
     }
     .slick-next.slick-arrow {
         position: absolute;
-        top: 50%;
+        top: 55%;
         right: vw(-85);
         cursor: pointer;
         width: vw(20);
@@ -61,7 +61,7 @@
         list-style-type: none;
         position: absolute;
         bottom: vh(32);
-        left: vw(100);
+        left: vw(130);
         .slick-active button{
             background-color: $color-white;
         }

@@ -61,6 +61,20 @@
     </header>
     <main>
         <section class="hero">
+            <div class="hero__slider">
+                <div class="hero__slider-item">
+                    <img src="./img/bg_img1.png" alt="">
+                </div>
+                <div class="hero__slider-item">
+                    <img src="./img/bg_img1.png" alt="">
+                </div>
+                <div class="hero__slider-item">
+                    <img src="./img/bg_img1.png" alt="">
+                </div>
+                <div class="hero__slider-item">
+                    <img src="./img/bg_img1.png" alt="">
+                </div>
+            </div> 
             <div class="container">
                 <h1 class="main__tiitle">
                     SURVIVE AT ALL COSTS
@@ -72,6 +86,14 @@
                     <span class="hero__button-text">Buy Now on Steam</span>
                     <span class="hero__button-price">$14.99</span>
                 </button>
+                <div class="hero__anchor">
+                    <p class="hero__anchor-text">
+                        The story
+                    </p>
+                    <svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.5786 1.83362H1.32422L11.338 10.0027L21.5786 1.83362Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                        
+                </div>
             </div>
         </section>
         <section class="about">
@@ -117,6 +139,7 @@
                     SURVIVE AT ALL COSTS
                 </button>
                 <div class="panel ">
+                    <span class="panel__line"></span>
                     <p class="description">
                         You have 30 minutes to find a relic, signal for extraction, and grab
                         one of three spots on the rescue chopper.
@@ -322,7 +345,7 @@
                     <div class="col-5">
                         <img src="./img/news_img.png" alt="">
                     </div>
-                    <div class="col-7">
+                    <div class="col-7 news__describtion">
                         <div class="news__info">
                             <h6 class="question">Want to stay in touch?</h6>
                             <h2 class="title">
@@ -331,13 +354,13 @@
                             <p class="description">
                                 In order to start receiving our news, all you have to do is enter your email address. Everything else will be taken care of by us. We will send you emails containing information about game. We don’t spam.
                             </p>
-                            <form class="news__form">
-                                <input placeholder="Your email address" type="text">
-                                <button class="button button_yellow">Subscribe now</button>
-                            </form>
                         </div>
                     </div>
                 </div>
+                <form class="news__form">
+                    <input placeholder="Your email address" type="text">
+                    <button class="button button_yellow">Subscribe now</button>
+                </form>
             </div>
         </section>
     </main>
@@ -429,6 +452,15 @@
             arrows: true,
 			prevArrow: '',
             dots: true,
+        });
+        $('.hero__slider').slick({
+            arrows: true,
+			prevArrow: '',
+            dots: true,
+            slidesToScroll: 1,
+            speed: 1500,
+            autoplay: true,
+            autpplaySpeed: 6000
         });
 	</script>
     <script src="./js/accordion.js"></script>
