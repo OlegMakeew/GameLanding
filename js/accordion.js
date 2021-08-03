@@ -1,12 +1,12 @@
-var acc = document.getElementsByClassName("accordion");
+let acc = document.getElementsByClassName("accordion");
 let panels = Array.from(document.querySelectorAll('.panel'))
-var i;
+let i;
 
 for (i = 0; i < acc.length; i++) {
     panels[0].style.maxHeight = panels[0].scrollHeight + "px";
     acc[i].addEventListener("click", function() {
         this.classList.toggle("active");
-        var panel = this.nextElementSibling;
+        let panel = this.nextElementSibling;
         if (panel.style.maxHeight){
             panel.style.maxHeight = null;
         } else {
@@ -14,3 +14,4 @@ for (i = 0; i < acc.length; i++) {
         } 
     });
 }
+

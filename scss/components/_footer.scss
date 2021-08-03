@@ -82,6 +82,7 @@
 
 .footer {
     @include mobile {
+        padding-top: vmin(91);
         &__logo {
             width: vmin(50);
         }

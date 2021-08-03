@@ -8,10 +8,10 @@
     padding-left: vw(800);
     &__item {
         padding:0 0 vw(36) vw(20);
-        margin-top: vh(5);
-        &:first-child {
-            margin-top: vw(70);
-        }
+        margin-top: vh(5);   
+    }
+    .title {
+        margin-bottom: vw(70);
     }
 }
 
@@ -22,10 +22,25 @@
     border: none;
     outline: none;
     transition: 0.5s;
+    position: relative;
     &__title {
         @include font('Bebas Neue', 700, vw(36), vh(36));
         letter-spacing: 2px;
         color: $color-yellow;
+        &::before {
+            content: '';
+            position: absolute;
+            width: vw(14);
+            height: vw(14);
+            top: 0;
+            left: vw(-45);
+            border-radius: 50%;
+            background-color: rgba($color: #000000, $alpha: 0);
+            border: vw(2) solid #FFFFFF;
+            &:active {
+                background: $color-white;
+            }
+        }
     }
 }
 .panel {
@@ -35,8 +50,18 @@
     max-height: 0;
     overflow: hidden;
     transition: 0.3s;
-    p {
+    position: relative;
+    .description {
         width: vw(362);
+    }
+    &__line {
+        position: absolute;
+        width: vw(140);
+        height: vw(5);
+        max-height: 0;
+        background: $color-white;
+        top: 0;
+        left: vw(-45);
     }
 }
 
@@ -59,12 +84,21 @@
     .accordion {
         &__title {
             @include font('Bebas Neue', 700, vmin(21), vmin(21));
+            &::before {
+                width: vmin(10);
+                height: vmin(10);
+                left: vmin(-30);
+                border: vmin(2) solid #FFFFFF;
+                &:active {
+                    background: $color-white;
+                }
+            }
         }
     }
     .panel {
         padding-right: 0;
         margin-top: vmin(10);
-        p {
+        .description {
             width: 75%;
         }
     }

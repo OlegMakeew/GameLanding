@@ -24,9 +24,23 @@
 
 .news {
     @include mobile {
-        padding-top: vminb(10);
+        padding-top: vmin(10);
+        .row {
+            position: relative;
+        }
+        .col-5 {
+            position: absolute;
+            top: 0;
+            left: -45%;
+            width: vmin(230);
+            height: vmin(358);
+        }
+        .col-7 {
+            width: 60%;
+            margin-left: vmin(100);
+        }
         &__info {
-            padding-top: vmin(20);
+            padding-top: vmin(50);
             .title {
                 margin-bottom: vmin(50);
             }
@@ -36,11 +50,16 @@
             display: flex;
             flex-wrap: wrap;
             text-align: center;
+            width: vmin(270);
+            .button_yellow {
+                width: 100%;
+                margin-top: vmin(20);
+            }
             input {
-                @include font('Open Sans', 400, vw(14), vw(19));
-                width: vmin(270);
+                @include font('Open Sans', 400, vmin(14), vmin(19));
                 height: vmin(44);
-                margin-right: vmin(20);
+                margin-right: 0;
+                width: 100%;
             }
         }
     }
