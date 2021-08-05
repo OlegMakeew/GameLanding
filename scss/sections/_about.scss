@@ -81,7 +81,7 @@
 
 .about {
     @include mobile {
-        min-height: 649px;
+        min-height: 700px;
         &__content {
             flex-direction: column;
             &-info {
