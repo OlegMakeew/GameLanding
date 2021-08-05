@@ -46,8 +46,8 @@
 
 .system {
     @include mobile {
-        min-height: 649px;
-        padding-top: vmin(10);
+        min-height: 690px;
+        padding-top: vmin(68);
         text-align: center;
         .col-6 {
             width: 50%;
@@ -57,7 +57,7 @@
         }
         &__content {
             width: vmin(280);
-            margin-top: vmin(40);
+            margin-top: vmin(60);
         }
         &__border {
             width: vmin(280);

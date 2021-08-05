@@ -24,22 +24,23 @@
 
 .news {
     @include mobile {
-        padding-top: vmin(10);
+        padding-top: vmin(70);
         .row {
             position: relative;
         }
         .col-5 {
             position: absolute;
             top: 0;
-            left: -45%;
+            left: -35%;
             width: vmin(230);
             height: vmin(358);
         }
         .col-7 {
-            width: 60%;
-            margin-left: vmin(100);
+            z-index: 2;
         }
         &__info {
+            width: 62%;
+            margin-left: vmin(110);
             padding-top: vmin(50);
             .title {
                 margin-bottom: vmin(50);
@@ -48,9 +49,9 @@
         &__form {
             margin-top: vmin(30);
             display: flex;
+            justify-content: center;
             flex-wrap: wrap;
             text-align: center;
-            width: vmin(270);
             .button_yellow {
                 width: 100%;
                 margin-top: vmin(20);
@@ -60,6 +61,10 @@
                 height: vmin(44);
                 margin-right: 0;
                 width: 100%;
+                ::placeholder {
+                    @include font('Open Sans', 400, vmin(14), vmin(19));
+                    vertical-align: bottom;
+                }
             }
         }
     }

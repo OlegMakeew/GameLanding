@@ -1,4 +1,5 @@
 .header {
+    z-index: 2;
     @include font('Open Sans', 700, vw(12), vh(16));
     position: absolute;
     left: 0;
