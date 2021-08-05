@@ -72,7 +72,7 @@
             }
         }
         &__anchor {
-            margin: vmin(180) 0 0 vmin(30);
+            margin: 60% 0 0 vmin(30);
             text-align: left;
             &-text {
                 @include font('Open Sans', 700, vmin(12), vmin(22));
