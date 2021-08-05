@@ -46,7 +46,9 @@
         margin-left: vw(12);
     }
     &__anchor {
-        margin-top: vw(363);
+        position: absolute;
+        bottom: vh(70);
+        margin-left: vw(684);
         &-text {
             @include font('Open Sans', 700, vw(12), vw(22));
             text-transform: uppercase;
@@ -72,8 +74,9 @@
             }
         }
         &__anchor {
-            margin: 60% 0 0 vmin(30);
+            bottom: 11vh;
             text-align: left;
+            margin-left: vmin(30);
             &-text {
                 @include font('Open Sans', 700, vmin(12), vmin(22));
             }

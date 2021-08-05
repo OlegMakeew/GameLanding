@@ -489,7 +489,9 @@
 }
 
 .hero__anchor {
-  margin-top: 25.20833vw;
+  position: absolute;
+  bottom: 7.29167vh;
+  margin-left: 47.5vw;
 }
 
 .hero__anchor-text {
@@ -524,8 +526,9 @@
     width: 0.3125vmin;
   }
   .hero__anchor {
-    margin: 60% 0 0 9.375vmin;
+    bottom: 11vh;
     text-align: left;
+    margin-left: 9.375vmin;
   }
   .hero__anchor-text {
     font-family: "Open Sans";
